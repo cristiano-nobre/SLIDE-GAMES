@@ -1,0 +1,144 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #1f2029;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.slide-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+}
+
+.slide-list {
+  display: flex;
+}
+
+.slide-content {
+  border: 1px solid #fff;
+  box-shadow: #000 10px 10px 15px;
+  position: relative;
+  border-radius: 10px;
+}
+
+.slide-item {
+  cursor: grab;
+  flex-shrink: 0;
+  padding: 0 10px;
+  width: 90vw;
+}
+
+.slide-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.slide-description {
+  background: linear-gradient(to top, #000, transparent);
+  border-radius: 10px;
+  color: #fff;
+  position: absolute;
+  padding: 20px;
+  bottom: 0;
+  width: 100%;
+}
+
+.slide-description h3 {
+  font-family: 'Koulen', sans-serif;
+  font-size: 40px;
+  position: relative;
+  top: 15px;
+}
+
+.slide-description p {
+  font-family: 'PT sans', sans-serif;
+  font-size: 24px;
+}
+
+.slide-nav-button {
+  position: absolute;
+  font-size: 30px;
+  background: transparent;
+  color: #fff;
+  z-index: 1;
+}
+
+.slide-nav-previous {
+  left: 10px;
+}
+
+.slide-nav-next {
+  right: 10px;
+}
+
+.slide-controls {
+  margin: 30px auto;
+}
+
+.slide-control-button {
+  font-size: 10px;
+  color: #fff;
+  background: transparent;
+  margin: 0 3px;
+  cursor: pointer;
+}
+
+.slide-control-button.active {
+  color: #cd8cf5;
+}
+
+@media screen and (max-width: 768px) {
+  .slide-description {
+    padding: 10px;
+  }
+
+  .slide-description h3 {
+      font-size: 24px;
+      top: 0;
+  }
+
+  .slide-description p {
+      display: none;
+  }
+
+  .slide-controls {
+    margin: 20px auto;
+  }
+
+  .slide-nav-button {
+    margin-top: -20px;
+    font-size: 28px;
+  }
+
+  .slide-control-button {
+    font-size: 10px;
+  }
+
+  .slide-nav-previous {
+    left: 10px;
+  }
+
+  .slide-nav-next {
+    right: 10px;
+  }
+}
